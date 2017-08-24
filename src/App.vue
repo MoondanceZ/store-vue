@@ -83,7 +83,7 @@ export default {
         padding: 10px 15px 0;
     }
     .layout-content{
-        min-height: 200px;
+        min-height:calc(100vh - 172px);
         margin: 15px;
         overflow: hidden;
         background: #fff;
