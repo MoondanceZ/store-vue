@@ -4,20 +4,26 @@
       <i-col :span="spanLeft" class="layout-menu-left">
         <Menu active-name="1" theme="dark" width="auto">
           <div class="layout-logo-left"></div>
-          <router-link to="/productList">
+          <router-link to="/">
             <Menu-item name="1">
+              <Icon type="ios-navigate" :size="iconSize"></Icon>
+              <span class="layout-text">首页</span>
+            </Menu-item>
+          </router-link>
+          <router-link to="/productList">
+            <Menu-item name="2">
               <Icon type="ios-navigate" :size="iconSize"></Icon>
               <span class="layout-text">商品信息</span>
             </Menu-item>
           </router-link>
           <router-link to="/orderList">
-            <Menu-item name="2">
+            <Menu-item name="3">
               <Icon type="ios-keypad" :size="iconSize"></Icon>
               <span class="layout-text">订单管理</span>
             </Menu-item>
           </router-link>
           <router-link to="/purchaseList">
-            <Menu-item name="3">
+            <Menu-item name="4">
               <Icon type="ios-analytics" :size="iconSize"></Icon>
               <span class="layout-text">采购管理</span>
             </Menu-item>
@@ -52,12 +58,14 @@
 
 <script>
 import Router from 'vue-router'
+import Hello from '@/components/Hello'
 import ProductList from '@/components/Product/ProductList'
 import OrderList from '@/components/Order/OrderList'
 import PurchaseList from '@/components/Purchase/PurchaseList'
 
 //定义路径
 const routes = [
+  { path: '/', component: Hello },
   { path: '/productList', component: ProductList },
   { path: '/orderList', component: OrderList },
   { path: '/purchaseList', component: PurchaseList }
