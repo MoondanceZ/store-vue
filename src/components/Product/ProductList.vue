@@ -4,7 +4,7 @@
 </template>
 <script>
 export default {
-    name: 'product',
+    name: 'productList',
     data() {
         return {
             products: []

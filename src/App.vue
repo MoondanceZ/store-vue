@@ -4,7 +4,7 @@
       <i-col :span="spanLeft" class="layout-menu-left">
         <Menu active-name="1" theme="dark" width="auto">
           <div class="layout-logo-left"></div>
-          <router-link to="/product">
+          <router-link to="/productList">
             <Menu-item name="1">
               <Icon type="ios-navigate" :size="iconSize"></Icon>
               <span class="layout-text">商品信息</span>
@@ -52,13 +52,13 @@
 
 <script>
 import Router from 'vue-router'
-import Product from '@/components/Product'
+import ProductList from '@/components/Product/ProductList'
 import OrderList from '@/components/Order/OrderList'
 import PurchaseList from '@/components/Purchase/PurchaseList'
 
 //定义路径
 const routes = [
-  { path: '/product', component: Product },
+  { path: '/productList', component: ProductList },
   { path: '/orderList', component: OrderList },
   { path: '/purchaseList', component: PurchaseList }
 ]
